@@ -36,7 +36,7 @@ func isTrustedLocation(slice []string, val string) bool {
 	return false
 }
 
-func init() {
+func Init() {
 	dialog := []Step{
 		{
 			req: Req{55.649799, 37.595258},
