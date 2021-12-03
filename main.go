@@ -36,7 +36,6 @@ func getArguments() (float64, float64) {
 		Init()
 		panic("Клиент отключился. Посылаем уведомление родителю. Выключение сервера.")
 	}
-	fmt.Println(*latitude)
 	if latitude == nil || *latitude == 0 {
 		panic("-latitude аргумент пропущен")
 	}
