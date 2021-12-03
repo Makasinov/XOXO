@@ -28,10 +28,12 @@ func main() {
 }
 
 func getArguments() (float64, float64) {
+	test := flag.Bool("test", true, "test")
 	latitude := flag.Float64("latitude", 0, "широта")
 	longitude := flag.Float64("longitude", 0, "долгота")
-	flag.Parse()
-
+	if test == nil || *test == true {
+		panic("Клиент отключился. Посылаем уведомление родителю. Выключение сервера.")
+	}
 	if latitude == nil || *latitude == 0 {
 		panic("-latitude аргумент пропущен")
 	}
